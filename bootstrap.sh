@@ -14,5 +14,6 @@ else
 	fi
 fi
 unset doIt
-[ ! -d $(brew --prefix)/etc/profile.d/ ] && mkdir $(brew --prefix)/etc/profile.d/ && cp z/* $(brew --prefix)/etc/profile.d/
+[ ! -d $(brew --prefix)/etc/profile.d/ ] && mkdir $(brew --prefix)/etc/profile.d/ 
+[ -f $(brew --prefix)/etc/profile.d/ ] && cp z/* $(brew --prefix)/etc/profile.d/
 source ~/.bash_profile

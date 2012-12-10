@@ -1,4 +1,4 @@
-# Mathias’s dotfiles
+# Chrischans dotfiles (ripoff from mathiasbynens)
 
 ## Installation
 
