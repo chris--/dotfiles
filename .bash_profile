@@ -45,4 +45,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 # Load rupa's z if installed
-[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+[ -f /usr/local/bin/brew ] && [ -f $(brew --prefix)/etc/profile.d/z.sh ] 
+&& source $(brew 
+--prefix)/etc/profile.d/z.sh
