@@ -17,7 +17,6 @@ sudo scutil --set ComputerName "Christians MacBook"
 sudo scutil --set HostName "Christians MacBook"
 sudo scutil --set LocalHostName "Christians-MacBook"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Christians-MacBook"
-
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
 
@@ -176,15 +175,8 @@ defaults write com.apple.BezelServices kDimTime -int 300
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
-<<<<<<< HEAD
-# `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
-=======
-# `Inches`, and `true` with `false`.
 defaults write NSGlobalDomain AppleLanguages -array "de" "en"
 defaults write NSGlobalDomain AppleLocale -string "de_DE@currency=EUR"
->>>>>>> fiddeld with the options so they suit my laptop
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
@@ -338,8 +330,13 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 # Set the icon size of Dock items to 40 pixels
 defaults write com.apple.dock tilesize -int 40
 
+<<<<<<< HEAD
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
+=======
+# Set the icon size of Dock items to 40 pixels
+defaults write com.apple.dock tilesize -int 40
+>>>>>>> b75817118406230130d2551e915a0e4dde99992c
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -389,11 +386,7 @@ defaults write com.apple.dock showhidden -bool true
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 
 # Add iOS Simulator to Launchpad
-<<<<<<< HEAD
-sudo ln -sf /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Applications/iOS\ Simulator.app
-=======
 # ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Applications/iOS\ Simulator.app
->>>>>>> fiddeld with the options so they suit my laptop
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
@@ -459,35 +452,6 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 #defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 ###############################################################################
-<<<<<<< HEAD
-=======
-# iTunes                                                                      #
-###############################################################################
-
-# @TODO: update to iTunes 11
-# Disable the iTunes store link arrows
-# defaults write com.apple.iTunes show-store-link-arrows -bool false
-
-# Disable the Genius sidebar in iTunes
-# defaults write com.apple.iTunes disableGeniusSidebar -bool true
-
-# Disable the Ping sidebar in iTunes
-# defaults write com.apple.iTunes disablePingSidebar -bool true
-
-# Disable all the other Ping stuff in iTunes
-# defaults write com.apple.iTunes disablePing -bool true
-
-# Disable radio stations in iTunes
-# defaults write com.apple.iTunes disableRadio -bool true
-
-# Make ⌘ + F focus the search input in iTunes
-# To use these commands in another language, browse iTunes’s package contents,
-# open `Contents/Resources/your-language.lproj/Localizable.strings`, and look
-# for `kHiddenMenuItemTargetSearch`.
-defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
-
-###############################################################################
->>>>>>> fiddeld with the options so they suit my laptop
 # Mail                                                                        #
 ###############################################################################
 
@@ -555,11 +519,7 @@ sudo mdutil -E / > /dev/null
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use a modified version of the Pro theme by default in Terminal.app
-<<<<<<< HEAD
-open "${HOME}/init/Mathias.terminal"
-=======
-open "$HOME/init/christian.terminal"
->>>>>>> fiddeld with the options so they suit my laptop
+open "${HOME}/init/christian.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
 defaults write com.apple.terminal "Default Window Settings" -string "Christian"
 defaults write com.apple.terminal "Startup Window Settings" -string "Christian"
@@ -570,7 +530,7 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Christian"
 #defaults write org.x.X11 wm_ffm -bool true
 
 # Install pretty iTerm colors
-open "${HOME}/init/Mathias.itermcolors"
+# open "${HOME}/init/Mathias.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false

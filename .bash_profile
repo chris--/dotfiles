@@ -25,7 +25,7 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null
 done
 
-# Prefer US English and use UTF-8
+# Prefer German and use UTF-8
 export LC_ALL="de_DE.UTF-8"
 export LANG="de_DE"
 
