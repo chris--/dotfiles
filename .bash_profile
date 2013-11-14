@@ -9,6 +9,9 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+# add zsh
+source `brew --prefix`/etc/profile.d/z.sh
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
