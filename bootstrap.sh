@@ -2,7 +2,7 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull
 function doIt() {
-	rsync --exclude "z" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
@@ -14,6 +14,4 @@ else
 	fi
 fi
 unset doIt
-[ ! -d $(brew --prefix)/etc/profile.d/ ] && mkdir $(brew --prefix)/etc/profile.d/ 
-[ -f $(brew --prefix)/etc/profile.d/ ] && cp z/* $(brew --prefix)/etc/profile.d/
 source ~/.bash_profile
