@@ -48,6 +48,7 @@ brew install zopfli
 
 brew tap homebrew/versions
 brew install lua52
+brew install z
 
 # Remove outdated versions from the cellar
 brew cleanup
